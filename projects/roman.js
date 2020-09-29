@@ -18,6 +18,7 @@ let romanNumeral = [
 
 let romanized = "";
 
+/*
 for (let i = 0; i < decimalValue.length; i += 1) {
   if (num >= decimalValue[i]) {
     let count = Math.floor(num/decimalValue[i]);
@@ -30,7 +31,17 @@ for (let i = 0; i < decimalValue.length; i += 1) {
   console.log(num);
   }
 
+} */
+// above was my solution, below is a cleaner solution from FCC
+
+
+for (let i = 0; i < decimalValue.length; i += 1) {
+  while (num >= decimalValue[i]) {
+    romanized += romanNumeral[i];
+    num -= decimalValue[i];
+  }
 }
+
 
 
 
